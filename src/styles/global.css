@@ -41,28 +41,62 @@
     font-display: swap;
   }
 
-
   input,
   textarea select,
   button {
     @apply outline-0;
   }
 
+  h2 {
+    @apply font-bold text-3xl md:text-5xl;
+  }
+
+  p {
+    @apply text-lg md:text-xl;
+  }
+
   button {
     @apply font-medium text-white;
   }
 
-  .border-color {
-    @apply border-[#333333];
+  .experience-overflow{
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+  .experience-overflow::-webkit-scrollbar{
+    display: none;
   }
 
-  .constraint {
-    @apply container;
+
+  .width-fill-available {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
   }
 
-  .explainer {
-    @apply text-sm leading-normal lg:text-xl md:leading-6 lg:leading-8;
+  ::-webkit-scrollbar {
+    width: 8px;
+    max-height: 8px;
   }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #111111; 
+    border-radius: 10px;    
+    margin-right: 5px;
+  }
+
+  scrollbar-width{
+    width: thin;
+  }
+  
+
 }
 
 @layer utilities {
