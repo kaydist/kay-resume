@@ -59,14 +59,13 @@
     @apply font-medium text-white;
   }
 
-  .experience-overflow{
-    -ms-overflow-style: none; 
+  .experience-overflow {
+    -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .experience-overflow::-webkit-scrollbar{
+  .experience-overflow::-webkit-scrollbar {
     display: none;
   }
-
 
   .width-fill-available {
     width: 100%;
@@ -79,24 +78,22 @@
     width: 8px;
     max-height: 8px;
   }
-  
+
   /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 10px;
   }
-   
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #111111; 
-    border-radius: 10px;    
+    background: #111111;
+    border-radius: 10px;
     margin-right: 5px;
   }
 
-  scrollbar-width{
+  scrollbar-width {
     width: thin;
   }
-  
-
 }
 
 @layer utilities {

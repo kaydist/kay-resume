@@ -1,5 +1,6 @@
 import * as React from "react";
 import Layout from "../layout/layout";
+import gsap from "gsap";
 
 //sections
 import TechnicalSkills from "../sections/technical-skills";
