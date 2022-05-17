@@ -16,6 +16,7 @@
 
   html {
     @apply font-avertaCY;
+    cursor: none;
   }
 
   body {
@@ -75,8 +76,8 @@
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-    max-height: 8px;
+    width: 5px;
+    max-height: 5px;
   }
 
   /* Track */
@@ -93,6 +94,43 @@
 
   scrollbar-width {
     width: thin;
+  }
+
+  .normal-cursor{
+    @apply w-[0.5rem] h-[0.5rem] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#ffffff00] bg-black z-[9999px];
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    /* mix-blend-mode: difference; */
+  }
+
+  .mouse-link{
+    @apply w-28 h-28 rounded-full absolute flex justify-center items-center text-white bg-[#00000080] z-[9999px];
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+
+  .custom-skill-link{
+    @apply w-28 h-28 rounded-full flex items-center justify-center absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00000080] opacity-100 z-[9999px];
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+
+  .video-cursor{
+    @apply w-40 h-40 rounded-full flex items-center justify-center absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00000080] opacity-100 z-[9999px];
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
   }
 }
 

@@ -1,6 +1,6 @@
 import * as React from "react";
+import { useEffect } from "react";
 import Layout from "../layout/layout";
-import gsap from "gsap";
 
 //sections
 import TechnicalSkills from "../sections/technical-skills";
@@ -10,12 +10,13 @@ import Experiences from "../sections/experiences";
 import Project from "../sections/projects";
 import Education from "../sections/education";
 import Hobbies from "../sections/hobbies";
+import { Cursor } from "../animations/cusor";
 
 const IndexPage = () => {
   return (
     <Layout>
       <div className="flex flex-wrap gap-2">
-        <div className="mx-auto md:w-[25%] h-screen md:fixed bg-white">
+        <div className="mx-auto md:w-[25%] h-screen md:fixed bg-white z-20">
           <Profile />
         </div>
 
