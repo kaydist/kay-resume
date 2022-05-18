@@ -34,7 +34,7 @@ function Hobbies() {
       <h2 className="">SOFT SKILLS X HOBBIES</h2>
 
       <div className="mt-6 md:mt-14">
-        <div className="custom-video-cursor absolute opacity-0">
+        <div className="custom-video-cursor opacity-0">
 
           <video
             id="Quick and Adaptive learning"

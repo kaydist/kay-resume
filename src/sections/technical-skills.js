@@ -37,7 +37,7 @@ function TechnicalSkills() {
       <h2 className="">TECHNICAL SKILLS</h2>
 
       <div className="mt-6 md:mt-14 start flex-wrap">
-        <div className="skill-cursor opacity-0 absolute">
+        <div className="skill-cursor opacity-0">
           <span
             id="React Js"
             className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

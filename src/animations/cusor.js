@@ -1,30 +1,35 @@
 export const Cursor = () => {
+  var newposX = 0;
+  var newposY = 0;
+  const mouseCursor = document.querySelector(".normal-cursor");
+  const customSkillCursor = document.querySelector(".skill-cursor");
+  const videoCursor = document.querySelector(".custom-video-cursor");
+
+  const navCursor = document.querySelectorAll(".nav");
+  const skillCursor = document.querySelectorAll(".skill");
+  const hobbyCursor = document.querySelectorAll(".hobby");
+
+  const positionMouse = () => {mouseCursor.setAttribute(
+    "style",
+    "top: " + newposY + "px; left: " + newposX + "px"
+  );
+  customSkillCursor.setAttribute(
+    "style",
+    "top: " + newposY + "px; left: " + newposX + "px"
+  );
+  videoCursor.setAttribute(
+    "style",
+    "top: " + newposY + "px; left: " + newposX + "px"
+  );
+  }
+
   document.addEventListener("mousemove", (event) => {
-    let mouseX = event.pageX;
-    let mouseY = event.pageY;
-    var newposX = mouseX;
-    var newposY = mouseY;
+    let mouseX = event.clientX;
+    let mouseY = event.clientY ;
+    newposX = mouseX;
+    newposY = mouseY;
 
-    const mouseCursor = document.querySelector(".normal-cursor");
-    const customSkillCursor = document.querySelector(".skill-cursor");
-    const videoCursor = document.querySelector(".custom-video-cursor");
-
-    const navCursor = document.querySelectorAll(".nav");
-    const skillCursor = document.querySelectorAll(".skill");
-    const hobbyCursor = document.querySelectorAll(".hobby");
-
-    mouseCursor.setAttribute(
-      "style",
-      "top: " + newposY + "px; left: " + newposX + "px"
-    );
-    customSkillCursor.setAttribute(
-      "style",
-      "top: " + newposY + "px; left: " + newposX + "px"
-    );
-    videoCursor.setAttribute(
-      "style",
-      "top: " + newposY + "px; left: " + newposX + "px"
-    );
+    positionMouse()
 
     navCursor.forEach((link) => {
       link.addEventListener("mouseleave", () => {
@@ -60,6 +65,5 @@ export const Cursor = () => {
         videoCursor.classList.remove("opacity-0");
       });
     });
-
   });
 };
