@@ -15,9 +15,9 @@ function Experiences() {
         </h2>
       </div>
 
-      <div className="experience-overflow mt-14 md:mt-32 overflow-x-auto md:max-w-[60vw]">
+      <div className="experience-overflow mt-14 md:mt-32 overflow-x-auto overflow-y-hidden md:max-w-[60vw]">
         <div
-          className="flex flex-col md:flex-row justify-start items-center gap-y-14 md:start md:flex-nowrap snap-x snap-mandatory snap-start
+          className="flex flex-col md:flex-row justify-start items-center gap-y-14 md:start md:flex-nowrap
           "
         >
           <div className=" min-w-[65vw] panel">

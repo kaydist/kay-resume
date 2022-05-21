@@ -76,15 +76,20 @@ export const TextAnimation = () => {
   );
   let sections = gsap.utils.toArray(".panel");
 
-  gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: professionalExperience,
-      pin: ".professionalExperience",
-      scrub: 0.1,
-      anticipatePin: 1.5,
-      pinSpacing: true,
+  ScrollTrigger.matchMedia({
+    // large
+    "(min-width: 768px)": function () {
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: professionalExperience,
+          pin: ".professionalExperience",
+          scrub: 0.1,
+          anticipatePin: 1.5,
+          pinSpacing: true,
+        },
+      });
     },
   });
 
