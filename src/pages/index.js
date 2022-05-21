@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import Layout from "../layout/layout";
 
 //sections
@@ -10,28 +10,44 @@ import Experiences from "../sections/experiences";
 import Project from "../sections/projects";
 import Education from "../sections/education";
 import Hobbies from "../sections/hobbies";
-import { Cursor } from "../animations/cusor";
+import { TextAnimation } from "../animations/text";
+import CoverLetter from "../sections/coverletter";
+import CoverLetterBtn from "../sections/coverLetterBtn";
 
 const IndexPage = () => {
+  useLayoutEffect(() => {
+    TextAnimation();
+  }, []);
   return (
     <Layout>
+      <CoverLetterBtn />
       <div className="flex flex-wrap gap-2">
-        <div className="mx-auto md:w-[25%] h-screen md:fixed bg-white z-20">
+        <div className="mx-auto md:w-[25%] h-screen md:fixed bg-white">
           <Profile />
         </div>
 
-        <div className="md:ml-[35%] width-fill-available">
-          <Summary />
+        <div className="md:ml-[40%] width-fill-available">
+          <div id="resume">
+            <div className="beforepin">
+              <Summary />
 
-          <TechnicalSkills />
+              <TechnicalSkills />
 
-          <Experiences />
+              <Experiences />
+            </div>
 
-          <Project />
+            <div className="afterpin">
+              <Project />
 
-          <Education />
+              <Education />
 
-          <Hobbies />
+              <Hobbies />
+            </div>
+          </div>
+
+          <div id="coverletter" className="hidden min-h-screen">
+            <CoverLetter />
+          </div>
         </div>
       </div>
     </Layout>

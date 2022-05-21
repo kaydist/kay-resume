@@ -1,13 +1,13 @@
 import React from "react";
-import ReactIcon from "../images/icons/react.inline.svg";
-import NextIcon from "../images/icons/nextjs.inline.svg";
-import GatsbyIcon from "../images/icons/gatsby.inline.svg";
-import TailwindIcon from "../images/icons/tailwind.inline.svg";
-import SassIcon from "../images/icons/sass.inline.svg";
-import StyledComponentIcon from "../images/icons/styled-components.inline.svg";
-import GsapIcon from "../images/icons/greensock.inline.svg";
-import ReduxIcon from "../images/icons/redux.inline.svg";
-import FirebaseIcon from "../images/icons/firebase.inline.svg";
+import ReactIcon from "../assets/icons/react.inline.svg";
+import NextIcon from "../assets/icons/nextjs.inline.svg";
+import GatsbyIcon from "../assets/icons/gatsby.inline.svg";
+import TailwindIcon from "../assets/icons/tailwind.inline.svg";
+import SassIcon from "../assets/icons/sass.inline.svg";
+import StyledComponentIcon from "../assets/icons/styled-components.inline.svg";
+import GsapIcon from "../assets/icons/greensock.inline.svg";
+import ReduxIcon from "../assets/icons/redux.inline.svg";
+import FirebaseIcon from "../assets/icons/firebase.inline.svg";
 
 function TechnicalSkills() {
   const skills = [
@@ -34,7 +34,13 @@ function TechnicalSkills() {
   };
   return (
     <div className="py-16 md:py-[10rem]">
-      <h2 className="">TECHNICAL SKILLS</h2>
+      <div className="">
+        <h2
+          className="section-heading"
+        >
+          Technical Skills
+        </h2>
+      </div>
 
       <div className="mt-6 md:mt-14 start flex-wrap">
         <div className="skill-cursor opacity-0">
@@ -109,7 +115,7 @@ function TechnicalSkills() {
               onMouseEnter={() => {
                 mouseIconChange(skill.name);
               }}
-              className="col-start w-60 max-w-full py-4 md:py-6 uppercase relative skill"
+              className="col-start w-56 max-w-full py-4 md:py-6 uppercase relative skill paragraph"
             >
               <p>{skill.name}</p>
             </div>

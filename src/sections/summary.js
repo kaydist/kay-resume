@@ -1,18 +1,11 @@
-import React, { useLayoutEffect } from "react";
-import { TextAnimation } from "../animations/text";
+import React from "react";
 
 function Summary() {
-  useLayoutEffect(() => {
-    TextAnimation();
-  }, []);
   return (
     <div className="py-16 md:py-[15rem]">
-      <div className="overflow-hidden">
+      <div className="">
         <h2
           className="section-heading"
-          onClick={() => {
-            TextAnimation();
-          }}
         >
           PROFESSIONAL SUMMARY
         </h2>

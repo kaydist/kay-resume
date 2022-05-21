@@ -3,9 +3,12 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      avertaCY: [
-        '"Averta CY"', 'sans-serif'
-      ]
+      sfPro: [
+        '"SF Pro Display Regular"', 'sans-serif'
+      ],
+      Lausanne: [
+        '"Lausanne"', 'sans-serif'
+      ],
     },
 
     extend: {

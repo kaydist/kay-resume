@@ -7,8 +7,16 @@ function Project() {
   ];
 
   return (
-    <div className="py-16 md:py-[10rem]">
-      <h2 className="">PRACTICE PROJECTS</h2>
+    <div className="py-16 md:py-[16rem] practice-projects">
+      <div className="">
+        <h2 className="section-heading">PRACTICE PROJECTS</h2>
+      </div>
+
+      <div className="project-cursor opacity-0">
+        <span className="skill-icon absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          View Project
+        </span>
+      </div>
 
       <div className="mt-6 md:mt-14">
         {projects.map((project, idx) => {
@@ -16,9 +24,11 @@ function Project() {
             <div
               id={project.name}
               key={idx}
-              className="py-6 md:py-12 first:border-t border-b uppercase text-xl md:text-3xl relative nav"
+              className="py-6 md:py-12 first:border-t border-b uppercase relative project"
             >
-              {project.name}
+              <div className="paragraph">
+                <p className="text-xl md:text-3xl">{project.name}</p>
+              </div>
             </div>
           );
         })}

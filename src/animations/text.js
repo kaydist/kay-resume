@@ -1,32 +1,141 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const TextAnimation = () => {
-  const heading = document.querySelector(".section-heading");
+  const headingAll = document.querySelectorAll(".section-heading");
 
+  headingAll.forEach((heading) => {
+    var arr = heading.textContent.split(" ");
+    heading.textContent = "";
 
-  var arr = heading.textContent.split(" ");
-  heading.textContent = "";
-
-  arr.forEach((word) => {
-    heading.innerHTML += `<span class='word'>${word}</span> `;
+    arr.forEach((word) => {
+      heading.innerHTML += `<span class='word'>${word}</span> `;
+    });
   });
 
-  const tl = gsap.timeline({
-      duration: 2.5,
-      ease: 'power2.out'
-})
-  gsap.set(".word", { opacity: 0, y: 10, display: "inline-block" });
-  gsap.set(".paragraph p", { opacity: 0, y: 10, display: "inline-block" });
+  function hide(elem) {
+    gsap.set(elem, { autoAlpha: 0 });
+  }
 
-  tl.fromTo(
-    ".word",
-    { y: 400, opacity: 0 },
-    { y: 0, opacity: 1, stagger: 0.2 }
+  const tl = gsap.timeline();
+  gsap.utils.toArray(".beforepin .section-heading").forEach((elem) => {
+    hide(elem);
+    var y = 50;
+    elem.style.transform = "translateY(" + y + "px)";
+    elem.style.opacity = "0";
+    tl.fromTo(
+      elem,
+      { y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
+  });
+
+  gsap.utils.toArray(".beforepin .paragraph p").forEach((elem) => {
+    hide(elem);
+    var y = 50;
+    elem.style.transform = "translateY(" + y + "px)";
+    elem.style.opacity = "0";
+    tl.fromTo(
+      elem,
+      { y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
+  });
+
+  const professionalExperience = document.getElementById(
+    "professionalExperience"
   );
-  tl.fromTo(
-    ".paragraph p",
-    { y: 400, opacity: 0 },
-    { y: 0, opacity: 1 },
-    '<60%'
-  );
+  let sections = gsap.utils.toArray(".panel");
+
+  gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: professionalExperience,
+      pin: ".professionalExperience",
+      scrub: 0.1,
+      anticipatePin: 1.5,
+      pinSpacing: true,
+    },
+  });
+
+  gsap.utils.toArray(".afterpin .section-heading").forEach((elem) => {
+    hide(elem);
+    var y = 50;
+    elem.style.transform = "translateY(" + y + "px)";
+    elem.style.opacity = "0";
+    tl.fromTo(
+      elem,
+      { y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
+  });
+
+  gsap.utils.toArray(".afterpin .paragraph p").forEach((elem) => {
+    hide(elem);
+    var y = 50;
+    elem.style.transform = "translateY(" + y + "px)";
+    elem.style.opacity = "0";
+    tl.fromTo(
+      elem,
+      { y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "top 50%",
+          scrub: true,
+        },
+      }
+    );
+  });
 };
