@@ -22,7 +22,7 @@ function Project() {
         <div className="mt-6 md:mt-14">
           {projects.map((project, idx) => {
             return (
-              <a href={`${project.link}`} rel="noreferrer">
+              <a href={`${project.link}`} rel="noreferrer" target='_blank'>
                 <div
                   id={project.name}
                   key={idx}

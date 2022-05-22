@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 //assets
-import FacebookIcon from "../assets/icons/facebook.inline.svg";
+import MailIcon from "../assets/icons/mail.inline.svg";
 import GithubIcon from "../assets/icons/github.inline.svg";
-import TwitterIcon from "../assets/icons/twitter.inline.svg";
+import PhoneIcon from "../assets/icons/phone.inline.svg";
 import LinkedinIcon from "../assets/icons/linkedin.inline.svg";
 import Headshot from "../assets/headshot.jpg";
 import PDFVersion from "../assets/Oseni_Resume.pdf";
@@ -50,7 +50,7 @@ function Profile() {
         </div>
 
         <div className="center w-full gap-6">
-          <a href="https://github.com/kaydist" rel="noreferrer">
+          <a href="https://github.com/kaydist" rel="noreferrer" target="_blank">
             <div className="w-5 h-5 nav">
               <GithubIcon />
             </div>
@@ -59,6 +59,7 @@ function Profile() {
           <a
             href="https://www.linkedin.com/in/oseni-omokayode-a696b4185"
             rel="noreferrer"
+            target="_blank"
           >
             <div className="w-5 h-5 nav">
               <LinkedinIcon />
@@ -66,14 +67,14 @@ function Profile() {
           </a>
 
           <a href="mailto:kayodeoseni@ymail.com" rel="noreferrer">
-            <div className="w-5 h-5 nav">
-              <FacebookIcon />
+            <div className="w-5 h-5 nav" target="_blank">
+              <MailIcon />
             </div>
           </a>
 
           <a href="tel:+2347062937325" rel="noreferrer">
             <div className="w-5 h-5 nav">
-              <TwitterIcon />
+              <PhoneIcon />
             </div>
           </a>
         </div>
