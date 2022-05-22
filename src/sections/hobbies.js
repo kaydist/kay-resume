@@ -30,65 +30,68 @@ function Hobbies() {
   };
 
   return (
-    <div className="py-24 md:py-[12rem]">
-      <div className="">
-        <h2 className="section-heading">SOFT SKILLS X HOBBIES</h2>
-      </div>
-
-      <div className="mt-6 md:mt-14">
-        <div className="custom-video-cursor opacity-0">
-          <video
-            id="Quick and Adaptive learning"
-            className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            muted
-            loop
-          >
-            <source src={ReadingVid} type="video/mp4" />
-          </video>
-          <video
-            id="Great Communication skills"
-            className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            muted
-            loop
-          >
-            <source src={CommunicationVid} type="video/mp4" />
-          </video>
-          <video
-            id="alt music"
-            className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            muted
-            loop
-          >
-            <source src={MusicVid} type="video/mp4" />
-          </video>
-          <video
-            id="swimming"
-            className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            muted
-            loop
-          >
-            <source src={SwimmingVid} type="video/mp4" />
-          </video>
+    <div className="mb-[15vh] py-16 md:min-h-screen start">
+      <div className="w-full">
+        <div className="">
+          <h2 className="section-heading">SOFT SKILLS X HOBBIES</h2>
         </div>
 
-        {hobbies.map((hobby, idx) => {
-          return (
-            <div
-              key={idx}
-              className="py-6 md:py-12 first:border-t border-b uppercase relative hobby"
-              onMouseEnter={() => {
-                mouseIconChange(hobby.name);
-              }}
-              onMouseLeave={() => {
-                mouseLeave(hobby.name);
-              }}
+        <div className="mt-6 md:mt-14">
+          <div className="custom-video-cursor hidden">
+            <video
+              id="Quick and Adaptive learning"
+              className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              muted
+              loop
             >
-              <div className="paragraph">
-                <p className="text-xl md:text-3xl">{hobby.name}</p>
+              <source src={ReadingVid} type="video/mp4" />
+            </video>
+            <video
+              id="Great Communication skills"
+              className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              muted
+              loop
+            >
+              <source src={CommunicationVid} type="video/mp4" />
+            </video>
+            <video
+              id="alt music"
+              className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              muted
+              loop
+            >
+              <source src={MusicVid} type="video/mp4" />
+            </video>
+            <video
+              id="swimming"
+              className="hobby-icon flex justify-center items-center rounded-full w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              muted
+              loop
+            >
+              <source src={SwimmingVid} type="video/mp4" />
+            </video>
+          </div>
+
+          {hobbies.map((hobby, idx) => {
+            return (
+              <div
+                key={idx}
+                className="py-6 md:py-12 first:border-t border-b uppercase relative hobby"
+                onMouseEnter={() => {
+                  mouseIconChange(hobby.name);
+                }}
+                onMouseLeave={() => {
+                  mouseLeave(hobby.name);
+                }}
+                aria-hidden="true"
+              >
+                <div className="paragraph">
+                  <p className="">{hobby.name}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

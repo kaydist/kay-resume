@@ -2,7 +2,8 @@ import React from "react";
 
 function Summary() {
   return (
-    <div className="py-16 md:py-[15rem]">
+    <div className="py-16 md:py-0 md:min-h-screen center">
+      <div className="">
       <div className="">
         <h2
           className="section-heading"
@@ -19,6 +20,7 @@ function Summary() {
           development life cycle such as coding, debugging and maintenance of
           Web Applications using necessary Technologies.{" "}
         </p>
+      </div>
       </div>
     </div>
   );

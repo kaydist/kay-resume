@@ -4,16 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const TextAnimation = () => {
-  const headingAll = document.querySelectorAll(".section-heading");
-
-  headingAll.forEach((heading) => {
-    var arr = heading.textContent.split(" ");
-    heading.textContent = "";
-
-    arr.forEach((word) => {
-      heading.innerHTML += `<span class='word'>${word}</span> `;
-    });
-  });
 
   function hide(elem) {
     gsap.set(elem, { autoAlpha: 0 });

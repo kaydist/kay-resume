@@ -32,95 +32,95 @@ function TechnicalSkills() {
 
     focus.classList.remove("hidden");
   };
+  
   return (
-    <div className="py-16 md:py-[10rem]">
-      <div className="">
-        <h2
-          className="section-heading"
-        >
-          Technical Skills
-        </h2>
-      </div>
-
-      <div className="mt-6 md:mt-14 start flex-wrap">
-        <div className="skill-cursor opacity-0">
-          <span
-            id="React Js"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <ReactIcon />
-          </span>
-
-          <span
-            id="Next Js"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <NextIcon />
-          </span>
-
-          <span
-            id="Gatsby Js"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <GatsbyIcon />
-          </span>
-
-          <span
-            id="Tailwind"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <TailwindIcon />
-          </span>
-
-          <span
-            id="Styled-component"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <StyledComponentIcon />
-          </span>
-
-          <span
-            id="Sass"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <SassIcon />
-          </span>
-
-          <span
-            id="Redux"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <ReduxIcon />
-          </span>
-
-          <span
-            id="Gsap"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <GsapIcon />
-          </span>
-
-          <span
-            id="Firebase"
-            className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <FirebaseIcon />
-          </span>
+    <div className="py-16 min-h-srceen">
+      <div className="w-full">
+        <div className="">
+          <h2 className="section-heading">Technical Skills</h2>
         </div>
 
-        {skills.map((skill, idx) => {
-          return (
-            <div
-              key={idx}
-              onMouseEnter={() => {
-                mouseIconChange(skill.name);
-              }}
-              className="col-start w-56 max-w-full py-4 md:py-6 uppercase relative skill paragraph"
+        <div className="mt-6 md:mt-14 start flex-wrap">
+          <div className="skill-cursor opacity-0">
+            <span
+              id="React Js"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <p>{skill.name}</p>
-            </div>
-          );
-        })}
+              <ReactIcon />
+            </span>
+
+            <span
+              id="Next Js"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <NextIcon />
+            </span>
+
+            <span
+              id="Gatsby Js"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <GatsbyIcon />
+            </span>
+
+            <span
+              id="Tailwind"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <TailwindIcon />
+            </span>
+
+            <span
+              id="Styled-component"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <StyledComponentIcon />
+            </span>
+
+            <span
+              id="Sass"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <SassIcon />
+            </span>
+
+            <span
+              id="Redux"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <ReduxIcon />
+            </span>
+
+            <span
+              id="Gsap"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <GsapIcon />
+            </span>
+
+            <span
+              id="Firebase"
+              className="skill-icon absolute hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <FirebaseIcon />
+            </span>
+          </div>
+
+          {skills.map((skill, idx) => {
+            return (
+              <div
+                key={idx}
+                onMouseEnter={() => {
+                  mouseIconChange(skill.name);
+                }}
+                aria-hidden="true"
+                className="col-start w-44 max-w-full py-4 md:py-6 uppercase relative skill paragraph"
+              >
+                <p>{skill.name}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

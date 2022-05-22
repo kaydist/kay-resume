@@ -1,5 +1,3 @@
-import { Link } from "gatsby";
-
 export const Cursor = () => {
   var newposX = 0;
   var newposY = 0;
@@ -42,21 +40,20 @@ export const Cursor = () => {
     positionMouse();
   });
 
-
   NavLink.forEach((link) => {
     link.addEventListener("mouseleave", () => {
-      mouseCursor.classList.remove('bg-transparent')
-      mouseCursor.classList.remove('scale-[3]')
-      mouseCursor.classList.remove('border')
-      mouseCursor.classList.add('border-[#111111]')
+      mouseCursor.classList.remove("bg-transparent");
+      mouseCursor.classList.remove("scale-[3]");
+      mouseCursor.classList.remove("border");
+      mouseCursor.classList.add("border-[#111111]");
     });
     link.addEventListener("mouseover", () => {
-      mouseCursor.classList.add('bg-transparent')
-      mouseCursor.classList.add('scale-[3]')
-      mouseCursor.classList.add('border')
-      mouseCursor.classList.add('border-[#111111]')
+      mouseCursor.classList.add("bg-transparent");
+      mouseCursor.classList.add("scale-[3]");
+      mouseCursor.classList.add("border");
+      mouseCursor.classList.add("border-[#111111]");
     });
-  })
+  });
 
   projectCursor.forEach((link) => {
     link.addEventListener("mouseleave", () => {
@@ -88,12 +85,12 @@ export const Cursor = () => {
     link.addEventListener("mouseleave", () => {
       mouseCursor.classList.remove("hidden");
       videoCursor.classList.remove("video-cursor");
-      videoCursor.classList.add("opacity-0");
+      videoCursor.classList.add("hidden");
     });
     link.addEventListener("mouseover", () => {
       mouseCursor.classList.add("hidden");
       videoCursor.classList.add("video-cursor");
-      videoCursor.classList.remove("opacity-0");
+      videoCursor.classList.remove("hidden");
     });
   });
 };

@@ -43,12 +43,12 @@
   }
 
   h2 {
-    @apply font-bold text-3xl md:text-[3.5rem] font-Lausanne uppercase py-1;
+    @apply font-bold text-3xl md:text-[2.3rem] lg:text-[3.3rem] font-Lausanne uppercase py-1 leading-tight;
   }
 
   p,
   li {
-    @apply text-lg md:text-xl;
+    @apply text-lg lg:text-xl;
   }
 
   .experience-overflow {
@@ -71,12 +71,10 @@
     max-height: 5px;
   }
 
-  /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 10px;
   }
 
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #111111;
     border-radius: 10px;
@@ -88,13 +86,12 @@
   }
 
   .normal-cursor {
-    @apply w-3 h-3 rounded-full fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#ffffff00] bg-[#111111] flex justify-center items-center pointer-events-none;
+    @apply w-3 h-3 rounded-full fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#ffffff00] flex justify-center items-center pointer-events-none z-[99999] lg:backdrop-invert;
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
-    /* mix-blend-mode: difference; */
   }
 
   .mouse-link {
@@ -103,54 +100,14 @@
 
   .custom-project-link {
     @apply w-28 h-28 rounded-full flex items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-white bg-[#00000080] opacity-100 pointer-events-none;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
   }
 
   .custom-skill-link {
     @apply w-28 h-28 rounded-full flex items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-white bg-[#00000080] opacity-100 pointer-events-none;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
   }
 
   .video-cursor {
-    @apply w-40 h-40 rounded-full flex items-center justify-center fixed text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00000080] opacity-100 pointer-events-none;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    /* mix-blend-mode: difference; */
-  }
-
-  .slide-right {
-    animation: 3s slide-right;
-  }
-  @keyframes slide-right {
-    0% {
-      @apply translate-x-0;
-    }
-    100% {
-      @apply translate-x-[100vw];
-    }
-  }
-
-  .slide-left {
-    animation: 3s slide-left;
-  }
-  @keyframes slide-left {
-    0% {
-      @apply -translate-x-[100vw];
-    }
-    100% {
-      @apply translate-x-0;
-    }
+    @apply w-40 h-40 rounded-full flex items-center justify-center fixed text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 pointer-events-none;
   }
 }
 

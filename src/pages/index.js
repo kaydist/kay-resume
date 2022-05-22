@@ -26,7 +26,7 @@ const IndexPage = () => {
           <Profile />
         </div>
 
-        <div className="md:ml-[40%] width-fill-available">
+        <div className="md:ml-[40%] width-fill-available overflow-x-visible">
           <div id="resume">
             <div className="beforepin">
               <Summary />
@@ -45,8 +45,10 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div id="coverletter" className="hidden min-h-screen">
-            <CoverLetter />
+          <div id="coverletter" className="hidden">
+            <div className="center min-h-screen">
+              <CoverLetter />
+            </div>
           </div>
         </div>
       </div>

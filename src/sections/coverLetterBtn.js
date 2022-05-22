@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import CoverLetterIcon from "../assets/icons/letter.inline.svg";
 
@@ -9,10 +9,13 @@ function CoverLetterBtn() {
   };
   return (
     <div
-      className="fixed bottom-4 right-4 z-40 p-6 w-8 h-8 border border-[#111111] rounded-full"
+      className="fixed bottom-5 right-5 z-40 p-2 w-12 h-12 border bg-white border-[#111111] rounded-full nav"
       onClick={toggleSection}
+      aria-hidden="true"
     >
-      <span><CoverLetterIcon /></span>
+      <span className="block w-full h-full">
+        <CoverLetterIcon />
+      </span>
     </div>
   );
 }

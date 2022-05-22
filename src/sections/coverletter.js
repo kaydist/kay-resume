@@ -1,5 +1,5 @@
 import React from "react";
-import PDFVersion from '../assets/Oseni_Coverletter.pdf'
+import PDFVersion from "../assets/Oseni_Coverletter.pdf";
 
 function CoverLetter() {
   return (
@@ -17,8 +17,8 @@ function CoverLetter() {
         <br />
         <p>
           In my previous experience, I worked with different teams of different
-          sizes as a Frontend Engineer to deliver a great product and better User
-          Experience for existing products. I worked closely with backend
+          sizes as a Frontend Engineer to deliver a great product and better
+          User Experience for existing products. I worked closely with backend
           engineers to implement features to improve user experience. I have
           also worked with designers in creating and implementing clean and
           usable UI.
@@ -39,12 +39,17 @@ function CoverLetter() {
         </p>
         <br />
         <p>
-          Sincerely, 
-          <br />
+          Sincerely,
           <br />
           Oseni Omokayode.
-          <a href="mailto:kayodeoseni@ymail.com" className="nav block">kayodeoseni@ymail.com</a>
-          <a href="tel:+2347062937325" className="nav block">+234 7062937325</a>
+          <br />
+          <br />
+          <a href="mailto:kayodeoseni@ymail.com" className="nav block w-fit">
+            kayodeoseni@ymail.com
+          </a>
+          <a href="tel:+2347062937325" className="nav block w-fit">
+            +234 7062937325
+          </a>
         </p>
       </div>
 
