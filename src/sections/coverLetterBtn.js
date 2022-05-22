@@ -9,7 +9,7 @@ function CoverLetterBtn() {
   };
   return (
     <div
-      className="fixed bottom-5 right-5 z-40 p-2 w-12 h-12 border bg-white border-[#111111] rounded-full nav"
+      className="fixed bottom-5 right-5 z-40 p-4 w-12 h-12 border bg-white border-[#111111] rounded-full nav"
       onClick={toggleSection}
       aria-hidden="true"
     >
